@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- 自己写的 -->
+<view class="container">
+  <view>请输入第一个数字</view>
+  <input type="number" class="num1" bindchange="getnum1" placeholder="num1" data-id="num1"></input>
+  <view>请输入第二个数字</view>
+  <input type="number" class="num2" bindchange="getnum2" placeholder="num2" data-id="num2"></input>
+  <button bindtap="bijiao">比较</button>
+  <view>比较结果：{{result}}</view>
+</view>
+<!-- 优化1：在页面中直接进行比较 -->
+<view class="container">
+  <view>请输入第一个数字</view>
+  <input type="number" class="num1" bindchange="getnum3" placeholder="num1" data-id="num1"></input>
+  <view>请输入第二个数字</view>
+  <input type="number" class="num2" bindchange="getnum3" placeholder="num2" data-id="num2"></input>
+  <button bindtap="bijiao">比较</button>
+  <view>比较结果：{{num1>num2 ? '第一个数字大' : (num1 < num2 ? '第二个数字大' : '两数相等' )}}</view>
+</view>
+
+<view class="container">
+  <form bindsubmit="formCompare">
+    <view>
+      <text>请输入第一个数字：</text>
+      <input type="number" name="num1" />
+    </view>
+    <view>
+      <text>请输入第二个数字：</text>
+      <input type="number" name="num2" />
+    </view>
+    <button form-type="submit">比较</button>
+  </form>
+  <view>
+    <text>比较结果：{{result}}</text>
+  </view>
+</view>
