@@ -1,30 +1,37 @@
-<view class="container">
-  <form bindsubmit="submit">
-    <view>
-      <text>姓名：</text>
-      <input name="name" value="甜萍" />
-    </view>
-    <view>
-      <text>性别：</text>
-      <radio-group>
-        <label><radio value="0"/>男</label>
-        <label><radio value="1" checked/>女</label>
-      </radio-group>
-    </view> 
-    <view>
-    <text>专业技能</text>
-    <checkbox-group>
-      <label><checkbox value="HTML" />HTML</label>
-      <label><checkbox value="CSS" />CSS</label>
-      <label><checkbox value="JAVASCRIPT" />JAVASCRIPT</label>
-      <label><checkbox value="PS" />PS</label>
-      <label><checkbox value="JQ" />JQ</label>
-    </checkbox-group>
-    </view>
-    <view>
-      <text>您的意见：</text>
-      <textarea name="opinion" value="测试"  />
-    </view>
-    <button form-type="submit">提交</button>
-  </form>
+<view class="result">
+  <view class="result-num">{{num}}</view>
+  <view class="result-op">{{op}}</view>
+</view>
+<view class="btns">
+  <view>
+    <view hover-class="bg" bindtap="resetBtn">C</view> 
+    <view hover-class="bg" bindtap="delBtn">DEL</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="%">%</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="/">÷</view> 
+  </view>
+  <view>
+    <view hover-class="bg" bindtap="numBtn" data-val="7">7</view> 
+    <view hover-class="bg" bindtap="numBtn" data-val="8">8</view>
+    <view hover-class="bg" bindtap="numBtn" data-val="9">9</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="*">×</view>
+  </view>
+  <view>
+    <view hover-class="bg" bindtap="numBtn" data-val="4">4</view> 
+    <view hover-class="bg" bindtap="numBtn" data-val="5">5</view>
+    <view hover-class="bg" bindtap="numBtn" data-val="6">6</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="-">-</view>
+  </view>
+  <view>
+    <view hover-class="bg" bindtap="numBtn" data-val="1">1</view> 
+    <view hover-class="bg" bindtap="numBtn" data-val="2">2</view>
+    <view hover-class="bg" bindtap="numBtn" data-val="3">3</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="+">+</view>
+  </view>
+  <view>
+    <view hover-class="bg" bindtap="numBtn" data-val="0">0</view> 
+    <view hover-class="bg" bindtap="dotBtn">.</view> 
+    <view hover-class="bg" bindtap="opBtn" data-val="+">=</view>
+  </view>
+   
+
 </view>

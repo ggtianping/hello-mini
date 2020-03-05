@@ -70,6 +70,13 @@
 					"pathName": "pages/nare/nare",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/calculator/calculator",
+					"pathName": "pages/calculator/calculator",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/nare/nare",
+    "pages/calculator/calculator",
     "pages/logs/logs"
   ],
   "window": {
