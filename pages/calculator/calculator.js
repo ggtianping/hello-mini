@@ -2,7 +2,6 @@ Page({
   data:{
     num:'123',
     op:'+',
-   
   },
   result:null,
   isClear:false,
@@ -18,6 +17,16 @@ Page({
   },
   opBtn: function(e){
     var op = e.target.dataset.val;
+    var num = Number(this.data.num);
+    this.setData({op:e.target.dataset.val});
+    if(this.isClear){
+      return;
+    }
+    this.isClear = true;
+    if(this.result == null){
+      this.result = num;
+      return;
+    }
     console.log(op);
   },
   dotBtn: function(e){
